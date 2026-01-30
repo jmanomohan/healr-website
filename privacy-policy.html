@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Healr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --primary-light: #e0f2fe;
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+            --secondary: #0f172a;
+            --text: #334155;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --teal: #14b8a6;
+            --blue: #3b82f6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background: var(--bg-alt);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 16px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .logo span {
+            background: var(--secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #0d9488 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Header */
+        .page-header {
+            padding: 140px 0 60px;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--primary-light) 50%, #ccfbf1 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        /* Content */
+        .content {
+            padding: 60px 0 100px;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 20px;
+            padding: 48px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .policy-card h2 {
+            font-size: 24px;
+            color: var(--secondary);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .policy-card h2:first-child {
+            margin-top: 0;
+        }
+
+        .policy-card p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .policy-card ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .policy-card li {
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .highlight-box {
+            background: var(--primary-light);
+            border-left: 4px solid var(--blue);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .policy-card {
+                padding: 24px;
+            }
+
+            .policy-card h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Healr" class="logo-img">Healr<span>.pro</span></a>
+            <a href="https://play.google.com/store/apps/details?id=pro.healr.physio" target="_blank" class="btn btn-primary">Download App</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy matters to us. Here's how we protect your data.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content">
+        <div class="container">
+            <div class="policy-card">
+                <h2>Introduction</h2>
+                <p>At Healr ("we", "our", or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application designed for physiotherapists.</p>
+                
+                <div class="highlight-box">
+                    <p>🔒 We do not collect, sell, or share your personal information with any third parties.</p>
+                </div>
+
+                <h2>Information We Collect</h2>
+                <p>We believe in minimal data collection. The only information we collect is:</p>
+                <ul>
+                    <li><strong>Mobile Phone Number:</strong> Required for account login and authentication purposes only.</li>
+                </ul>
+                <p>We do not collect any other personal information such as names, email addresses, location data, or browsing history.</p>
+
+                <h2>How We Store Your Information</h2>
+                <p>Your security is our priority. Here's how we protect your data:</p>
+                <ul>
+                    <li><strong>Encryption:</strong> Your mobile number is encrypted using industry-standard encryption protocols before being stored.</li>
+                    <li><strong>Secure Storage:</strong> All data is stored on secure servers with strict access controls.</li>
+                    <li><strong>No Plain Text:</strong> We never store your mobile number in plain text format.</li>
+                </ul>
+
+                <h2>Data Access & Privacy</h2>
+                <p>We have implemented strict data access controls to ensure privacy:</p>
+                <ul>
+                    <li><strong>Physiotherapist Data Isolation:</strong> Each physiotherapist can only view and access their own patient details. You cannot see data belonging to other physiotherapists.</li>
+                    <li><strong>Patient Privacy:</strong> Patient information entered by a physiotherapist is only accessible to that specific physiotherapist.</li>
+                    <li><strong>No Cross-Access:</strong> There is no way for one user to access another user's patient records or data.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>👤 Your patient data remains completely private and isolated to your account only.</p>
+                </div>
+
+                <h2>Information Sharing</h2>
+                <p>We want to be absolutely clear about our data sharing practices:</p>
+                <ul>
+                    <li>We do <strong>NOT</strong> sell your information to anyone.</li>
+                    <li>We do <strong>NOT</strong> share your information with third parties.</li>
+                    <li>We do <strong>NOT</strong> use your data for advertising purposes.</li>
+                    <li>We do <strong>NOT</strong> provide your data to data brokers or marketing companies.</li>
+                </ul>
+
+                <h2>Data Retention</h2>
+                <p>Your data is retained only as long as you maintain an active account with Healr. If you choose to delete your account, all associated data will be permanently removed from our servers.</p>
+
+                <h2>Your Rights</h2>
+                <p>You have the following rights regarding your data:</p>
+                <ul>
+                    <li><strong>Access:</strong> You can request information about what data we have stored.</li>
+                    <li><strong>Deletion:</strong> You can request deletion of your account and all associated data.</li>
+                    <li><strong>Portability:</strong> You can request an export of your data.</li>
+                </ul>
+
+                <h2>Security Measures</h2>
+                <p>We employ various security measures to protect your information:</p>
+                <ul>
+                    <li>End-to-end encryption for data transmission</li>
+                    <li>Encrypted storage for all sensitive information</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Secure authentication mechanisms</li>
+                </ul>
+
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+
+                <h2>Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:healrpro@gmail.com">healrpro@gmail.com</a></p>
+
+                <p class="last-updated">Last Updated: January 30, 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Healr.pro. All rights reserved.</p>
+            <p style="margin-top: 8px;"><a href="index.html">Back to Home</a></p>
+        </div>
+    </footer>
+</body>
+</html>
